@@ -1,0 +1,28 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Pixels / Clarity / Changeability"
+theme = "minimaximus"
+[params]
+  author = "Bartosz Wieczorek"
+  description = "Making UIs clear and changable. | Design is never done. | Fight complexity."
+[permalinks]
+  posts = "/:filename/"
+  projects = "/:filename/"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 4

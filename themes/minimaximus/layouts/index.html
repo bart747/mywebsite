@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <main aria-role="main" class="main-wrapper">
+    <header class="homepage-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <section class="homepage-content">
+    <ul class="list__index">
+      {{ range where .Site.RegularPages "Section" "posts" }}
+        <li class="list__link"><a href="{{.Permalink}}">{{.Title}}</a></li>
+      {{end}}
+    </ul>
+    </section>
+    <!--
+    <section>
+      <pre>
+tools = {
+  "Go": ["tooling", "Hugo"],
+  "CSS": ["SCSS"]
+  "JavaScript": ["TypeScript", "React"],
+}
+      </pre>
+    </section>
+    -->
+    <section>
+      <div>
+      <span id="contact">
+      </span>
+      </div>
+    </section>
+  </main>
+{{ end }}

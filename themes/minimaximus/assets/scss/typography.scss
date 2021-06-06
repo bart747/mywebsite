@@ -1,0 +1,66 @@
+article {
+  max-width: 36em;
+  margin: 0 0 3rem 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+blockquote {
+  border: solid $blue-light;
+  border-width: 0 0 0 2px;
+  margin: 0;
+  padding: 1em 1em;
+}
+
+ul,
+ol {
+  margin: 1rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.25;
+  margin: 0 0 0.5em 0;
+}
+
+pre,
+code {
+  font-family: $monospace; 
+  font-size: 15px;
+}
+
