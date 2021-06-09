@@ -1,9 +1,11 @@
 
 $brown: #885522;
 $orange: #cc3311;
-$blue: #2233dd;
-$blue-light: #ddeeff;
-$green: #11aa66;
+$red: #dd2244;
+$blue-light: #aaddff;
+$blue: #2244ee;
+$green: #119955;
+$turquoise: #11aabb;   
 $yellow-light: #eeee88;
 $grey-light: #ddd;
 
@@ -17,7 +19,7 @@ html {
 }
 
 body {
-  background-color: #f8f5f4;
+  background-color: #fff;
   font-family: $default-font;
   font-style: normal;
   font-weight: normal;
@@ -30,11 +32,11 @@ a {
   transition: background-color ease-out 0.1s;
   text-decoration: none;
   border-radius: 6px;
-  color: $green;
+  color: $blue;
   padding: 0.12em 0.25em;
   margin: -0.12em -0.25em;
   &:hover {
-    background-color: #333;
+    background-color: $yellow-light;
   }
 }
 

@@ -20,6 +20,7 @@ h1 {
   font-size: 2.5em;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  margin: 2rem 0 2rem;
 }
 
 h2 {
@@ -39,12 +40,18 @@ h4 {
   line-height: 1.5;
 }
 
+.title--jumbo {
+  color: $red;
+}
+
 blockquote {
   border: solid $blue-light;
   border-width: 0 0 0 2px;
   margin: 0;
-  padding: 1em 1em;
+  margin: 2em 0;
+  padding: 0 1em;
 }
+
 
 ul,
 ol {
@@ -60,7 +67,7 @@ li {
 
 pre,
 code {
-  font-family: $monospace; 
+  font-family: $monospace;
   font-size: 15px;
 }
 
