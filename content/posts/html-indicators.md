@@ -3,6 +3,7 @@ title: "Structuring HTML Form Validation Indicators"
 subtitle: "Good data structures make your work simpler."
 categories: ["code"]
 date: 2016-10-24
+draft: "true"
 ---
 
 Should I add a 'success' class to an input element or some other part of my form?

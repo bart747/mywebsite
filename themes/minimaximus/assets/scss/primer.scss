@@ -1,12 +1,16 @@
 
 $brown: #885522;
 $orange: #cc3311;
+$orange-dark: #dd4411;
 $red: #dd2244;
 $blue-light: #aaddff;
 $blue: #2244ee;
-$green: #119955;
+$green-dark: #228844;
+$green: #33cc66;
+$sand-dark: #776644;
 $turquoise: #11aabb;   
-$yellow-light: #eeee88;
+$yellow-light: #fffe99;
+$blue-light: #aaffff;
 $grey-light: #ddd;
 
 $default-font: "Roboto", sans-serif;
@@ -32,9 +36,11 @@ a {
   transition: background-color ease-out 0.1s;
   text-decoration: none;
   border-radius: 6px;
-  color: $blue;
+  color: inherit;
   padding: 0.12em 0.25em;
   margin: -0.12em -0.25em;
+  text-decoration: underline;
+  text-decoration-color: $green;
   &:hover {
     background-color: $yellow-light;
   }
