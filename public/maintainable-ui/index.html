@@ -117,7 +117,7 @@ The obvious ones are font families, media queries, colors and sizes.</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// fonts
-</span><span style="font-style:italic"></span>$family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
+</span><span style="font-style:italic"></span>$family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, <span style="font-weight:bold">sans-serif</span>;
 
 <span style="font-style:italic">// colors
 </span><span style="font-style:italic"></span>$txt:              #404040;
@@ -181,8 +181,8 @@ $lg:               1024<span style="">px</span>;</code></pre></td></tr></table>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-style:italic">// FONTS
 </span><span style="font-style:italic"></span>
-$base-family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, sans-serif;
-$mono-family:           <span style="font-style:italic">&#34;Droid Sans Mono&#34;</span>, monospace;
+$base-family:           <span style="font-style:italic">&#34;Source Sans Pro&#34;</span>, <span style="font-weight:bold">sans-serif</span>;
+$mono-family:           <span style="font-style:italic">&#34;Droid Sans Mono&#34;</span>, <span style="font-weight:bold">monospace</span>;
 
 
 <span style="font-style:italic">// COLORS
@@ -247,17 +247,17 @@ fit it into a line-hight that equals one $u.</p>
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="font-weight:bold">@mixin</span> font-base {
-  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">text-color</span>;
-  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">base-font-family</span>;
-  <span style="font-weight:bold">font-size</span>:  <span style="">$</span><span style="font-weight:bold">base-font-size</span>;
-  <span style="font-weight:bold">line-height</span>: <span style="">$</span><span style="font-weight:bold">base-line-height</span>;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size:  $base-font-size;
+  line-height: $base-line-height;
 }
 
 <span style="font-weight:bold">@mixin</span> font-mono {
-  <span style="font-weight:bold">color</span>: <span style="">$</span><span style="font-weight:bold">grey-dark</span>;
-  <span style="font-weight:bold">font-family</span>: <span style="">$</span><span style="font-weight:bold">mono-font-family</span>;
-  <span style="font-weight:bold">font-size</span>: <span style="">$</span><span style="font-weight:bold">small-font-size</span>;
-  <span style="font-weight:bold">line-height</span>: <span style="font-weight:bold">0</span><span style="font-weight:bold">.75</span> * <span style="">$</span><span style="font-weight:bold">u</span>;
+  color: $grey-dark;
+  font-family: $mono-font-family;
+  font-size: $small-font-size;
+  line-height: 0.75 * $u;
   <span style="font-style:italic">// 4 lines of code will give 3x default leading
 </span><span style="font-style:italic"></span>}</code></pre></td></tr></table>
 </div>
@@ -284,12 +284,12 @@ fit it into a line-hight that equals one $u.</p>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss">$assets-dir: <span style="font-style:italic">&#39;assets&#39;</span>;
 
-<span style="font-weight:bold">@function</span> <span style="font-weight:bold">image</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
-  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">img</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
+<span style="font-weight:bold">@function</span> image($name) {
+  <span style="font-weight:bold">@return</span> <span style="font-style:italic">url(../</span><span style="font-weight:bold;font-style:italic">#{</span>$assets-dir<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">/img/</span><span style="font-weight:bold;font-style:italic">#{</span>$name<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">)</span>;
 }
 
-<span style="font-weight:bold">@function</span> <span style="font-weight:bold">font</span>(<span style="">$</span><span style="font-weight:bold">name</span>) {
-  <span style="font-weight:bold">@return</span> <span style="font-weight:bold">url</span>(<span style="font-weight:bold">..</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">assets-dir</span>}/<span style="font-weight:bold">fonts</span>/<span style="font-weight:bold">#</span>{<span style="">$</span><span style="font-weight:bold">name</span>});
+<span style="font-weight:bold">@function</span> font($name) {
+  <span style="font-weight:bold">@return</span> <span style="font-style:italic">url(../</span><span style="font-weight:bold;font-style:italic">#{</span>$assets-dir<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">/fonts/</span><span style="font-weight:bold;font-style:italic">#{</span>$name<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">)</span>;
 
 }
 
@@ -393,6 +393,6 @@ Maybe you won&rsquo;t remember how you figured it out.</p>
   </p>
 </footer>
 
-<script src="/js/contact.min.200179b2fd2d01bd4d5ae5279e599c0bba42204520486f6731c6b53b697d259f.js"></script>
+<script src="/js/contact.min.b2c83b2ea75a892dbc480f6379c88297a015916c5dc52388fdc75a888699123d.js"></script>
 </body>
 </html>

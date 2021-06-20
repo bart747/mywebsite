@@ -1,7 +1,4 @@
-const placement = document.getElementById('contact')
-const local = 'hello.bartosz'
-const domain = 'gmail.com'
-const svg = `
+const placement=document.getElementById('contact'),local='hello.bartosz',domain='gmail.com',svg=`
 <svg xmlns="http://www.w3.org/2000/svg"
 width="24" height="24" viewBox="0 0 24 24"
 fill="none" stroke="#395"
@@ -11,10 +8,6 @@ class="feather feather-mail">
 <polyline points="22,6 12,13 2,6">
 </polyline>
 </svg>
-`
-
-if (placement) {
-  placement.innerHTML = `
+`;placement&&(placement.innerHTML=`
 <a href="mailto:${local}@${domain}">${svg} ${local}@${domain}</a>
-`
-}
+`)
