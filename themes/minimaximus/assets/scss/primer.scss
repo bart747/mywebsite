@@ -1,12 +1,19 @@
 
+$background-color: #fff;
 $brown: #885522;
-$orange: #cc3311;
+$orange: #dd6611;
 $orange-dark: #dd4411;
+$orange-light: #ffccbb;
+$sand: #ddccaa;
 $red: #dd2244;
+$red-dark: #bb2244;
 $blue-light: #aaddff;
 $blue: #2244ee;
-$green-dark: #228844;
+$gray: #707070;
+$gray-light: #eee;
+$green-dark: #006622;
 $green: #33cc66;
+$green-light: #bbff99;
 $sand-dark: #776644;
 $turquoise: #11aabb;   
 $yellow-light: #fffe99;
@@ -24,27 +31,51 @@ html {
 }
 
 body {
-  background-color: #fbfafa;
+  background-color: $background-color;
   font-family: $default-font;
   font-style: normal;
   font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+main {
   max-width: 68em;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0 1rem;
+}
+
+nav {
+  background-color: $gray-light;
+  padding: 1rem 1rem;
+}
+
+footer {
+  background-color: $gray-light;
+  padding: 1rem 1rem;
 }
 
 a {
   transition: background-color ease-out 0.1s;
   text-decoration: none;
   border-radius: 6px;
-  color: inherit;
+  color: #222;
   padding: 0.12em 0.25em;
   margin: -0.12em -0.25em;
-  text-decoration: underline;
-  text-decoration-color: $green;
   &:hover {
     background-color: $yellow-light;
   }
+}
+
+p a {
+  text-decoration: underline;
+  text-decoration-color: $red;
+  text-decoration-thickness: 2px;
+}
+
+a svg {
+  color: $red;
+  vertical-align: top;
 }
 
 ::-moz-selection {
@@ -66,20 +97,16 @@ video {
   vertical-align: middle;
 }
 
-a svg {
-  vertical-align: top;
-}
-
 section {
   margin: 3rem 0
 }
 
-.link__icon-home {
-  padding: 0.5rem;
-}
-
 .icon-home {
   vertical-align: top;
+}
+
+.link-home {
+  padding: 0.25rem;
 }
 
 footer,

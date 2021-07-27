@@ -1,4 +1,4 @@
-<footer class="footer_footer__3LSES">
+<footer class="footer">
   <p>©2016-2021 Bartosz Wieczorek.
   <br>
   Some rights reserved — <a href="https://creativecommons.org/licenses/by/4.0/">
@@ -7,3 +7,6 @@
 </footer>
 {{ $contactjs := resources.Get "js/contact.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $contactjs.Permalink }}"></script>
+{{ $vuejs := resources.Get "js/vuetest.js" | resources.Minify | resources.Fingerprint }}
+<script type="module" src="{{ $vuejs.Permalink }}"></script>
+

@@ -1,26 +1,29 @@
 {{ define "main" }}
-  <main role="main" class="main-wrapper">
-    <header class="homepage-header">
-      <h1 class="title--jumbo">{{ .Title }}</h1>
+    <header class="home-header">
+      <h1 class="home-title">
+        Pixels <br>
+        Clarity <br>
+        Editability</h1>
     </header>
-    <section class="homepage-content">
-    <ul class="list__index">
+    <main class="main-wrapper">
+    <section class="home-content">
+    <ul class="post-list">
       {{ range where .Site.RegularPages "Section" "posts" }}
-        <li class="list__link"><a href="{{.Permalink}}">{{.Title}}</a></li>
+        <li class=""><a href="{{.Permalink}}">{{.Title}}</a></li>
       {{end}}
     </ul>
     </section>
-    <!--
+<!--
     <section>
       <pre>
 tools = {
-  "Go": ["tooling", "Hugo"],
-  "CSS": ["SCSS"]
-  "JavaScript": ["TypeScript", "React"],
+  "front-end": ["Vue", "TypeScript", "SCSS"],
+  "content": ["Hugo"],
+  "build": ["Webpack"]
 }
       </pre>
     </section>
-    -->
+  -->
     <section>
       <div>
       <span id="contact">

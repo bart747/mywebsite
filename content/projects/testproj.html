@@ -3,4 +3,20 @@ title: "test project"
 date: "2021-02-28"
 ---
 
-abc
+<div id="checkbox">
+    <span style="cursor:pointer" @click="select" v-html="selectHtml"></span>
+    not a normal checkbox
+    <span style="cursor:pointer" @click="remind" v-html="remindHtml"></span>
+  </div>
+</section>
+<section>
+  <div id="counter">
+    Counter: {{ counter }}
+  </div>
+</section>
+<section>
+  <div id="event-handling">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+  </div>
+</section>

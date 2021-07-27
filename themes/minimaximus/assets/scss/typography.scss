@@ -16,38 +16,37 @@ h4 {
   margin: 2rem 0 1rem;
 }
 
-h1 {
+h1 { // 2.5 * 1.2 = 3 = 2 * 1.5
   font-size: 2.5rem;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  margin: 2rem 0 2rem;
+  margin: 4rem 0 4rem;
 }
 
-h2 {
+h2 {  // 2 * 1.25 = 2.5 | * 3 = 7.5 | / 1.5 = 5 
   font-size: 2rem;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.25;
   letter-spacing: -0.01em;
 }
 
-h3 {
+h3 { // 1.25 * 1.2 = 1.5
   font-size: 1.25rem;
   line-height: 1.2;
 }
 
-h4 {
+h4 { // 1.125 * 1.33 ~= 1.5
   font-size: 1.125rem;
-  line-height: 1.35;
+  line-height: 1.33;
 }
 
 blockquote {
-  border: solid $blue-light;
+  border: dotted $gray;
   border-width: 0 0 0 2px;
   margin: 0;
   margin: 2em 0;
   padding: 0 1em;
 }
-
 
 ul,
 ol {
@@ -61,14 +60,17 @@ li {
   margin: 0 0 0.5em 0;
 }
 
-.list__link {
-  font-size: 1.125rem;
-  line-height: 1.35;
-  margin: 0 0 0.75em 0;
+.post-list li {
+  margin: 0 0 1em 0;
 }
 
-.list__index .list__link a {
-  text-decoration: none;
+.highlight {
+  background-color: inherit;
+  margin: 1rem 0;
+  padding: 0 0.25rem 0 0 ;
+  border-radius: 6px;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 pre,
@@ -77,3 +79,64 @@ code {
   font-size: 15px;
 }
 
+.lntable {
+  margin: 0;
+  width: auto;
+}
+
+.lntd { 
+  padding: 0 0.5rem 0 0;
+}
+
+.lnt,
+.c1 {
+  color: $gray; 
+}
+
+.nx {
+  color: $green-dark;
+}
+
+p {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes appear  {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  33% {
+    transform: rotate(-10deg);
+  }
+
+  66% {
+    transform: rotate(7deg);
+  }
+
+  100% {
+    transform: rotate(- 2deg);;
+  }
+}
+
+.feather {
+  animation-duration: 0.25s;
+  animation-name: appear;
+}
+
+.home-header {
+  color: $green;
+  background-color: $gray-light;
+  color: $red-dark;
+  padding: 1rem;
+  margin: 0;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 3rem 0;
+}

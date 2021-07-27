@@ -9,8 +9,6 @@ Lazy Load is a great idea, so it's overused frequently.
 Do you remember that situation when you scrolled down
 quickly to get to the middle part and the picture wasn't there yet?
 
-<!--more-->
-
 When using a plugin, you can use a threshold/offset option to fire the thing earlier.
 But people can scroll fast.
 If someone visits a site for, let's say,
